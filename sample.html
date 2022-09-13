@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boys Hostel WMO</title>
+    <style>
+        :root{
+    --primary:#177CAA;
+    --secondary:#0A4B69;
+    --primary-text:#FFFFFF;
+    --secondary-text:#000000;
+}
+/*reser*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+.container {
+
+    max-width: 100%;
+ 
+   
+}
+header nav {
+    height:15vh;
+    width:100vw;
+    background-color:var(--primary);
+    display:grid;
+    grid-template-columns: 2fr 8fr .5fr;
+    grid-template-areas: "logo list profile";
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+nav .logo{
+    grid-area: logo;
+    font-size:30px;
+    color: var(--primary-text);
+}
+
+nav ul{
+    display:flex;
+    grid-area:list;
+    justify-content: flex-end;
+    font-size:20px;
+    color: var(--primary);
+    margin-top: 40px;
+}
+.nav-list  li{
+    list-style: none;
+    margin-left: 30px;
+    
+}
+.nav-list li a{
+    text-decoration: none;
+    color: var(--primary-text);
+}
+.img-container{
+    display:flex;
+    justify-content: flex-end;
+}
+nav image{
+   
+    grid-area: profile;
+    margin-left:90%;
+    margin-right:20px;
+    margin-top: -35px;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+/*mobile view*/
+@media only screen and (max-width:760px) {
+    header nav{
+        padding: 0;
+    }
+    nav .logo{
+        font-size:25px;
+        color: var(--primary-text);
+        justify-content: space-around;
+        margin:auto;
+    }
+    nav ul{
+        position: absolute;
+
+    }
+    nav img{
+        display: block;
+        overflow: hidden;
+    }
+    
+}
+    </style>
+</head>
+
+
+<body>
+   
+    <div class="container">
+        <!--header open-->
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1>BOYS HOSTEL</h1>
+                </div>
+               
+                <ul class="nav-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Admission</a></li>
+                        <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="img-container">
+                <img src="menubar.png">
+                </div>
+                
+            </nav>
+            
+            
+            <div class="notification-scroller">
+                <h1>notification</h1>
+                
+            </div>
+          
+        </header>
+        <!--header close-->
+        <!--body open-->
+        <section class="body">
+           
+            <div class="img-container">
+                <h1>image</h1>
+            </div>
+            <div class="about-container">
+                <h1>about</h1>
+
+            </div>
+            <div class="about-img">
+                <h1>about</h1>
+
+            </div>
+            <div class="info-container">
+                <div class="facilities-container">
+                    <h1>facility</h1>
+                </div>
+                <div class="event-container">
+                    <h1>event</h1>
+                </div>
+                <div class="gallery">
+                    <h1>gallery</h1>
+                </div>
+                <div class="contact-container">
+                    <h1>contact</h1>
+                </div>   
+
+            </div>
+
+        </section>
+        <!--body close-->
+        <!--foot open-->
+        <footer class="footer">
+            <h1>footer</h1>
+
+        </footer>
+        <!--footer close-->
+
+   
+
+
+
+    </div>
+
+</body>
+
+</html>
