@@ -41,9 +41,6 @@ header .row{
 .logo .logo-img img{
     height: 10vh;
 }
-header #navbar{
-   
-}
 header nav img{
     height:6vh ;
 }
@@ -215,5 +212,22 @@ crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 crossorigin="anonymous"></script>
+
+  <!--jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          $(".profile-container").click(function () {
+              $(".profile-info").slideToggle(function () {
+                  if ($(".profile-container").css("align-items") == "flex-start") {
+                      $(".profile-container").css("align-items", "center");
+                  }
+                  else {
+                      $(".profile-container").css("align-items", "flex-start");
+                  }
+              });
+          });
+      });
+  </script>
 </body>
 </html>
