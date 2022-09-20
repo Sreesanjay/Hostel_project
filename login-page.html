@@ -11,35 +11,160 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <style>
-</style>
-<body class="bg-info m-5">
+  :root{
+    --primary-background:#177CAA;
+    --secondary-background:#0A4B69;
+    --primary-text:#FFFFFF;
+    --secondary-text:#000000;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+    
+}
+header {
+    background-color:var(--primary-background);
+    
+    
+}
+header .row{
+    margin-right: 0;
+}
 
-    <section class="vh-100">
+.logo{
+ display: flex;
+ align-items: center;
+}
+.logo .logo-img img{
+    height: 10vh;
+}
+header #navbar{
+   
+}
+header nav img{
+    height:6vh ;
+}
+.logo .logo-text{
+    padding-left:1em ;
+}
+header nav a{
+    color: whitesmoke;
+}
+header nav .profile-container
+{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+header nav .profile{
+    cursor: pointer;
+    width:3em;
+    height: auto;
+}
+header nav .profile-info{
+    margin: 0;
+    width: 20em;
+    text-align:center;
+    background-color: var(--secondary-background);
+    display: none;
+    
+    
+}
+header nav .profile-info h4{
+    
+    padding: .5em;
+}
+header nav .profile-info .line{
+    height: .3em;
+    width: 100%;
+    background-color:  var(--primary-background);
+}
+header nav .profile-info button {
+    margin:1em;
+    width:40%;
+    height:2em;
+    background-color: var(--primary-background);
+    border: none;
+    border-radius: 40px;
+}
+</style>
+<body class="bg-white">
+    <section>
+      <header>
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="logo m-auto p-3">
+                    <div class="logo-img">
+                        <img src="logo.jpg">
+                    </div>
+                    <div class="logo-text">
+                        <h2>BOYS HOSTEL</h1>
+                            <h6>WMO Arts And Science Collage</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 my-auto">
+                <nav class="navbar navbar-expand-lg navbar-light ">
+
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto pt-3">
+                            <li class="nav-item active">
+                                <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Admission</a>
+                            </li>
+                            <li class="nav-item mb-4 mr-3">
+                                <a class="nav-link text-white" href="#">Contact</a>
+                            </li>
+                            <li>
+                                <div class="profile-container ml-1">
+                                    <img src="profile.png" class="profile pb-1">
+                                    <div class="profile-info pt-3">
+                                        <h6>Name</h6>
+                                        <h6>E-mail</h6>
+                                        <h4>Manage Account</h4>
+                                        <h4>Personal page</h4>
+                                        <div class="line">
+
+                                        </div>
+                                        
+                                        <a href="login-page.html">
+                                          <button class="login">
+                                            Login
+                                          </button>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    </section>
+    <section class="vh-100 pt-3">
         <div class="container-fluid h-custom">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
               <img src="login-page-img.jpg"
                 class="img-fluid" alt="Sample image">
             </div>
-            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 bg-info p-5">
               <form>
-                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                  <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
-      
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-      
-                  <button type="button" class="btn btn-primary btn-floating mx-1">
-                    <i class="fab fa-linkedin-in"></i>
-                  </button>
-                </div>
-      
-                <div class="divider d-flex align-items-center my-4">
-                  <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-center my-5">
+                  <h1 class="lead fw-normal text-white">Sign in </h1>
                 </div>
       
                 <!-- Email input -->
@@ -70,39 +195,13 @@
                 <div class="text-center text-lg-start mt-4 pt-2">
                   <button type="button" class="btn btn-primary btn-lg"
                     style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-                  <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                      class="link-danger">Register</a></p>
                 </div>
       
               </form>
             </div>
           </div>
         </div>
-        <div
-          class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-          <!-- Copyright -->
-          <div class="text-white mb-3 mb-md-0">
-            Copyright © 2020. All rights reserved.
-          </div>
-          <!-- Copyright -->
-      
-          <!-- Right -->
-          <div>
-            <a href="#!" class="text-white me-4">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#!" class="text-white me-4">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#!" class="text-white me-4">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="#!" class="text-white">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </div>
-          <!-- Right -->
-        </div>
+        
         </section>
 
 
