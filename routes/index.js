@@ -3,19 +3,21 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+
+  notification="Admission Started";
+  res.render('Common/index', { commonUser:true,title: 'Boys hostel',notification });
 });
 
 router.get('/gallery', function(req, res, next) {
-  res.render('gallery', { title: 'Boys hostel' });
+  res.render('Common/gallery', { commonUser:true,title: 'Gallery' });
 });
 
 router.get('/login-page', function(req, res, next) {
-  res.render('login-page', { title: 'Login' });
+  res.render('Common/login-page', {commonUser:true, title: 'Login' });
 });
 
 router.get('/admission-form', function(req, res, next) {
-  res.render('admission-form', { title: 'admission-form' });
+  res.render('Common/admission-form', {commonUser:true, title: 'admission-form' });
 });
 
 

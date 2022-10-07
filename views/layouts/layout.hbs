@@ -14,11 +14,17 @@
 
 <body>
 
+    {{#if commonUser}}
 {{>common-header}}
+{{/if}}
+{{#if admin}}
+{{>admin-header}}
+{{/if}}
+{{#if student}}
+{{>student-header}}
+{{/if}}
 
 {{{body}}}
-
-
 
  <!--footer-->
     <section class="footer">

@@ -7,8 +7,13 @@ var hbs = require('express-handlebars');
 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var adminRouter = require('./routes/admin');
+var studentRouter = require('./routes/student');
 
+
+//requiring connction module
+
+var db=require('./config/connection');
 var app = express();
 
 // view engine setup
@@ -23,8 +28,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//mogo connections 
+
+db.connect((err)=> {
+  if(err) console.log('error'+err);
+  else console.log('db connected')
+})
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/admin', adminRouter);
+app.use('/student', studentRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
