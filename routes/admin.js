@@ -1,15 +1,27 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req,res, next) {
-  res.render('Admin/announcement',{admin:true});
+/* GET home page. */
+router.get('/', function(req, res, next) {
+
+  notification="Admission Started";
+  res.render('Common/index', { commonUser:true,title: 'Boys hostel',notification });
 });
 
-
-router.post('/announcement', function(req,res, next) {
-console.log('req.body')
-
+router.get('/gallery', function(req, res, next) {
+  res.render('Common/gallery', { commonUser:true,title: 'Gallery' });
 });
+
+router.get('/login-page', function(req, res, next) {
+  res.render('Common/login-page', {commonUser:true, title: 'Login' });
+});
+
+router.get('/admission-form', function(req, res, next) {
+  res.render('Common/admission-form', {commonUser:true, title: 'admission-form' });
+});
+
+ router.post('/login', function(req, res) {
+   console.log('request got')
+ })
 
 module.exports = router;

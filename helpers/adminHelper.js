@@ -1,4 +1,4 @@
-var db= require('../config/connection')
+/*var db= require('../config/connection')
 module.exports ={
 
 
@@ -7,4 +7,4 @@ addNotifications: ()=>{
 }
 
 
-}
+}*/

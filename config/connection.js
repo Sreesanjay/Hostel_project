@@ -1,4 +1,4 @@
-const MongoClient = require('mongodb').MongoClient
+/*const MongoClient = require('mongodb').MongoClient
 
 const state={
     db:null
@@ -16,4 +16,4 @@ module.exports.connect=function(done){
     module.exports.get=function(){
         return state.db
     }
-}
+}*/
